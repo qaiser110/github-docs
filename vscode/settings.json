@@ -1,0 +1,124 @@
+{
+  "terminal.integrated.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.tabCompletion": "on",
+  "editor.fontFamily": "'Roboto Mono','Source Code Pro for Powerline', Menlo, Monaco, monospace",
+  "editor.stickyTabStops": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.indentSize": 2
+  },
+  "workbench.settings.applyToAllProfiles": [],
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "editor.indentSize": "tabSize",
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "workbench.iconTheme": "material-icon-theme",
+  "eslint.run": "onSave",
+  "git.enableSmartCommit": true,
+  "nxConsole.showNodeVersionOnStartup": false,
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.wordWrap": "on",
+  "editor.fontLigatures": false,
+  "svelte.enable-ts-plugin": true,
+  "editor.accessibilitySupport": "off",
+  "docker.languageserver.formatter.ignoreMultilineInstructions": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "git.autofetch": true,
+  "editor.minimap.enabled": false,
+  "dart.flutterSdkPath": "/Users/q/Documents/dev/flutter/flutter",
+  "playwright.reuseBrowser": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "explorer.confirmPasteNative": false,
+  "application.shellEnvironmentResolutionTimeout": 20,
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12",
+  "workbench.startupEditor": "none",
+  "editor.codeActions.triggerOnFocusChange": true,
+  "files.autoSave": "onFocusChange",
+  "editor.fontSize": 14,
+  "editor.fontVariations": false,
+  "multiCommand.commands": [
+    {
+      "key": "ctrl+alt+9",
+      "command": "multiCommand.commitAndPush",
+      "sequence": ["git.stageAll", "git.commitStaged", "git.push"]
+    },
+    {
+      "key": "ctrl+alt+7",
+      "command": "multiCommand.deleteOneRowAbove",
+      "sequence": [
+        "cursorHome",
+        "deleteLeft",
+        "deleteLeft",
+        {
+          "command": "type",
+          "args": {
+            "text": " "
+          }
+        }
+      ]
+    }
+  ],
+  "git.confirmSync": false,
+  "debug.console.lineHeight": 17,
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "off",
+  "breadcrumbs.symbolPath": "off",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/.turbo": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/tmp": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/.turbo": true
+  },
+  "cSpell.words": [
+    "eslintrc",
+    "gitignore",
+    "prettierrc",
+    "prettierignore",
+    "sveltesociety",
+    "sveltesocietysvelte",
+    "tsconfig",
+    "turbojson"
+  ],
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "editor.tokenColorCustomizations": null
+  },
+  "window.confirmSaveUntitledWorkspace": false,
+  "chat.tools.terminal.autoApprove": {
+    "autoApprove": true
+  }
+}

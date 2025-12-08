@@ -1,0 +1,32 @@
+{
+  "For Loop": {
+    "prefix": ["for", "for-const"],
+    "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+    "description": "A for loop."
+  },
+  "qq function": {
+    "prefix": ["fun", "function"],
+    "body": ["const ${1:name} = () => {", "\t$0", "}"],
+    "description": "A for loop."
+  },
+  "qq console.log": {
+    "prefix": ["clll"],
+    "body": ["console.log(${${2:$CLIPBOARD}})", "$1"]
+  },
+  "qq console.log | {key: val}": {
+    "prefix": ["cll"],
+    "body": ["console.log(`${2:$CLIPBOARD}: ${${2:$CLIPBOARD}}`)", "$1"]
+  },
+  "qq console.log | JSON Object": {
+    "prefix": ["clj", "clo"],
+    "body": ["console.log(JSON.stringify(${2:$CLIPBOARD}, null, 2))", "$1"]
+  },
+  "qq Current file path": {
+    "prefix": ["file1"],
+    "body": ["$RELATIVE_FILEPATH"]
+  },
+  "qq const": {
+    "prefix": ["c"],
+    "body": ["const "]
+  }
+}

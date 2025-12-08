@@ -1,0 +1,47 @@
+[user]
+	email = Abbas.Qaiser@abc.net.au
+	name = Qaiser Abbas
+[core]
+	autocrlf = input
+	pager = less -RFX
+	editor = 'subl' --wait
+	excludesfile = /Users/abbasq6v/.gitignore_global
+[alias]
+	alias = config --get-regexp ^alias
+	l = log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph --all
+	s = show --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset'
+	sh = show head --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset'
+	aa = add --all
+	c = commit -m
+	v = remote -v
+	ac = !git add -A && git commit -m
+	lo = log --oneline
+	r = rebase -i
+	b = branch
+	bv = branch -vv
+	ba = branch -ra
+	bd = branch -d
+	co = checkout
+	cb = checkout -b
+	ca = commit --amend
+	cm = commit -a --amend -C HEAD
+	ci = commit -a -v
+	di = diff
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	mm = merge --no-ff
+	st = status --short --branch
+	tg = tag -a
+	pu = push --tags
+	un = reset --hard HEAD
+	uh = reset --hard HEAD^
+	pf = push -f
+	pb = !git push origin $(git branch | grep \\* | cut -d ' ' -f2)
+	hb = !git push heroku $(git branch | grep \\* | cut -d ' ' -f2):master -f
+	hm = push heroku master -f
+[diff]
+	algorithm = histogram
+	submodule = log
+[status]
+	submoduleSummary = true

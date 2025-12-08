@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaults
+// ~/Library/Application Support/Code/User/keybindings.json
+[
+  {
+    "key": "ctrl+alt+l",
+    "command": "multiCommand.deleteOneRowAbove"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+  }
+]

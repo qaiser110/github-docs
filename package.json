@@ -1,0 +1,19 @@
+{
+  "name": "my-code-samples",
+  "version": "1.0.0",
+  "scripts": {
+    "git-usr": "node -e 'require(\"./code/js/process/exec-multi.js\").printGitUser()'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://qaiser110@bitbucket.org/code-samples/git-flow.git"
+  },
+  "author": "Qaiser Abbas",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/code-samples/git-flow#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "split2": "^3.1.1",
+    "through2": "^3.0.1"
+  }
+}

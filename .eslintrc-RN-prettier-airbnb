@@ -1,0 +1,45 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "prettier",
+    "import"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "printWidth": 100,
+      "trailingComma": "all"
+    }],
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-curly-spacing": "off",
+    "react/jsx-equals-spacing": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-tag-spacing": "off",
+    "react/jsx-wrap-multilines": "off",
+    "no-param-reassign": 0,
+    "no-use-before-define": 0,
+    "no-return-assign": 0,
+    "no-nested-ternary": 0,
+    "one-var": 0,
+    "camelcase": 0,
+    "semicolons": false,
+    "consistent-return": 0,
+    "no-console": 0,
+    "no-unexpected-multiline": "off",
+    "prefer-arrow-callback": 0
+  }
+}

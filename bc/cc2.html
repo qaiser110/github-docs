@@ -1,0 +1,99 @@
+<!--https://www.tradingview.com/widget/advanced-chart/-->
+<div
+  id="tradingview-container"
+  style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1px;
+    padding: 1px;
+  "
+></div>
+
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script type="text/javascript">
+  const x_url = "https://x.com/";
+  const cg_url = "https://www.coingecko.com/en/coins/";
+
+  const widgets = [
+    { symbol: "MICHIUSD", x: "michionsolana", cg: "michicoin" },
+    { symbol: "SIGMAUSD", x: "sigmaonsol69", cg: "sigma" },
+    { symbol: "NPCUSD", x: "NonPlayableCoin", cg: "non-playable-coin" },
+    { symbol: "FUSTWBNB_0D7050", x: "FUSDFinance", cg: "fust-token" },
+    { symbol: "MASKSOLUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+    { symbol: "xxxxFUSDT", x: "xxxx", cg: "xxxx" },
+  ];
+
+  const container = document.getElementById("tradingview-container");
+
+  widgets.forEach((widget, index) => {
+    const div = document.createElement("div");
+    div.id = `tradingview_${index}`;
+
+    // Create wrapper for widget and links
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.height = "100%";
+
+    // Create links container
+    const linksDiv = document.createElement("div");
+    linksDiv.style.display = "flex";
+    linksDiv.style.gap = "10px";
+    linksDiv.style.padding = "5px 0";
+    linksDiv.style.justifyContent = "center";
+
+    // Add Twitter link if x attribute exists
+    if (widget.x) {
+      const twitterLink = document.createElement("a");
+      twitterLink.href = x_url + widget.x;
+      twitterLink.target = "_blank";
+      twitterLink.style.display = "flex";
+      twitterLink.style.alignItems = "center";
+      twitterLink.title = "Twitter/X";
+      twitterLink.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75-2.45 2.08-5.5 2.08-5.5s-3 1-6 1c3-3 7-4 7-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>`;
+      linksDiv.appendChild(twitterLink);
+    }
+
+    // Add CoinGecko link if cg attribute exists
+    if (widget.cg) {
+      const cgLink = document.createElement("a");
+      cgLink.href = cg_url + widget.cg;
+      cgLink.target = "_blank";
+      cgLink.style.display = "flex";
+      cgLink.style.alignItems = "center";
+      cgLink.title = "CoinGecko";
+      cgLink.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="#8dc63f"/><path d="M12 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/></svg>`;
+      linksDiv.appendChild(cgLink);
+    }
+
+    if (linksDiv.children.length > 0) {
+      wrapper.appendChild(linksDiv);
+    }
+
+    wrapper.appendChild(div);
+    container.appendChild(wrapper);
+
+    new TradingView.widget({
+      width: 350,
+      height: 200,
+      symbol: widget.symbol,
+      interval: widget.interval || "D",
+      timezone: "Australia/Sydney",
+      theme: "Dark",
+      style: "1",
+      locale: "en",
+      toolbar_bg: "#f1f3f6",
+      enable_publishing: false,
+      hide_legend: true,
+      withdateranges: false,
+      allow_symbol_change: true,
+      news: ["headlines"],
+      container_id: `tradingview_${index}`,
+    });
+  });
+</script>

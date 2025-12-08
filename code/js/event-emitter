@@ -1,0 +1,30 @@
+// https://nodejs.dev/en/learn/the-nodejs-event-emitter/
+
+const EventEmitter = require('events')
+
+const eventEmitter = new EventEmitter()
+
+eventEmitter.on('start', (start, end, label) => {
+  console.log(`started from ${start} to ${end}`)
+})
+
+setTimeout(function start1(params) {
+  eventEmitter.emit('start', 1, 100, 'Starting event 1')
+}, 1000)
+
+setTimeout(function start1(params) {
+  eventEmitter.emit('start', 2, 200, 'Starting event 2')
+}, 50)
+
+// ----------------------------------------------------
+
+var readline = require('readline')
+
+readline.emitKeypressEvents(process.stdin)
+
+if (process.stdin.isTTY) process.stdin.setRawMode(true)
+
+process.stdin.on('keypress', (chunk, key) => {
+  if (key && key.name == 'q') process.exit()
+  console.log(key.name)
+})

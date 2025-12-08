@@ -1,0 +1,16 @@
+first commit on master
+
+line added on master
+line added on branch-1
+
+commit-1
+
+commit-B
+
+commit-3
+
+A fix for commit-1
+
+something to move before commit-2
+
+something to add to commit-3
