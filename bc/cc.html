@@ -68,6 +68,10 @@
     linksDiv.style.padding = "5px 0";
     linksDiv.style.justifyContent = "center";
 
+    const tickerLbl = document.createElement("h3");
+    tickerLbl.textContent = widget.symbol.split("USD")[0];
+    linksDiv.appendChild(tickerLbl);
+
     // Add Twitter link if x attribute exists
     if (widget.x) {
       const twitterLink = document.createElement("a");
